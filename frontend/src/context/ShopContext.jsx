@@ -5,7 +5,8 @@ export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = process.env.BACKEND_URL;
+  const url = import.meta.env.VITE_REACT_APP_BACKEND_URL;
+
   const [token, setToken] = useState("");
   const [all_products, setAll_products] = useState([]);
 

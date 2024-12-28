@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 
 const Item = ({ product }) => {
-  const { addToCart, removeFromCart, cartItems = {}, url } = useContext(ShopContext);
+  const { addToCart, removeFromCart, cartItems, url } = useContext(ShopContext);
 
   return (
     <div>

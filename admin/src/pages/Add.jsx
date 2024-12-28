@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const Add = () => {
-  const url = process.env.BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const [image, setImage] = useState(false);
 
   const [data, setData] = useState({

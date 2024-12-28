@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { FaBox } from "react-icons/fa";
 
 const Orders = () => {
-  const url = process.env.BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const [orders, setOrders] = useState([]);
 
   const fechAllOrder = async () => {
