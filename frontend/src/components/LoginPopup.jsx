@@ -5,7 +5,7 @@ import { ShopContext } from "../context/ShopContext";
 
 const LoginPopup = ({ setShowLogin }) => {
   const [state, setState] = useState("Login");
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_REACT_APP_BACKEND_URL;
   const { token, setToken } = useContext(ShopContext);
   const [data, setData] = useState({
     name: "",

@@ -91,6 +91,7 @@ const userRegister = async (req, res) => {
       name: name,
       email: email,
       password: hashedPassword,
+      role: "GENERAL"
     });
 
     const user = await newUser.save();
@@ -109,4 +110,28 @@ const userRegister = async (req, res) => {
   }
 };
 
-export { userLogin, userRegister };
+
+// all user list
+
+const userList = async (req, res) => {
+
+  try {
+
+    const users = await userModel.find()
+
+    res.json({
+      success: true,
+      data: users
+    })
+
+  } catch (error) {
+    res.json({
+      message: error.message || error,
+      error: true,
+      success: false,
+    })
+  }
+
+}
+
+export { userLogin, userRegister, userList };

@@ -9,6 +9,7 @@ const ShopContextProvider = (props) => {
 
   const [token, setToken] = useState("");
   const [all_products, setAll_products] = useState([]);
+  const [userData, setUserData] = useState('')
 
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
@@ -82,9 +83,22 @@ const ShopContextProvider = (props) => {
     setCartItems(response.data.cartData);
   };
 
+
+  // get user list
+
+  const fetchUserList = async () => {
+    try {
+      const response = await axios.get(url + "/api/user/getuser");
+      setUserData(response.data.data);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
+  };
+
   useEffect(() => {
     async function loadData() {
       await fetchProductList();
+      await fetchUserList()
 
       if (localStorage.getItem("token")) {
         setToken(localStorage.getItem("token"));
@@ -105,6 +119,7 @@ const ShopContextProvider = (props) => {
     setToken,
     getTotalCartItems,
     url,
+    userData,
   };
 
   return (
