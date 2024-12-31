@@ -13,7 +13,7 @@ const Item = ({ product }) => {
         className="relative top-28 group bg-white flexCenter m-4 rounded-2xl ring-1 ring-slate-200/20 hover:shadow-sm"
       >
         <img
-          src={url + "/images/" + product.image}
+          src={product.image}
           alt={product.name}
           height={222}
           width={222}
@@ -23,7 +23,7 @@ const Item = ({ product }) => {
 
       <div className="p-3 pt-28 bg-primary rounded-xl">
         <h4 className="medium-18 line-clamp-1">{product.name}</h4>
-        <h5 className="text-[16px] font-bold text-gray-900/50 mb-1">
+        <h5 className="text-[16px] font-bold text-gray-900/50 mb-1 capitalize">
           {product.category}
         </h5>
         <p className="line-clamp-2">{product.description}</p>
@@ -31,7 +31,7 @@ const Item = ({ product }) => {
         <div className="flexBetween mt-3">
           <div className="text-secondary bold-18">${product.price}</div>
           <div>
-            {!cartItems || !cartItems[product._id] ? (
+            {!cartItems[product._id] ? (
               <FaPlus
                 onClick={() => addToCart(product._id)}
                 className="bg-white h-8 w-8 p-1.5 rounded-full shadow-inner cursor-pointer"

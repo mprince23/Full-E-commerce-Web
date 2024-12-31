@@ -18,17 +18,17 @@ const ProductMd = (props) => {
             <div className="flex gap-x-2 xl:flex-1 py-5">
                 <div className="flexCenter flex-col gap-[7px] flex-wrap">
 
-                    <img src={url + "/images/" + product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
+                    <img src={product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
 
-                    <img src={url + "/images/" + product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
+                    <img src={product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
 
-                    <img src={url + "/images/" + product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
+                    <img src={product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
 
-                    <img src={url + "/images/" + product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
+                    <img src={product.image} alt={product.name} className='max-h-[89px] rounded-lg bg-gray-10 object-cover' />
 
                 </div>
                 <div className="max-h-[377px] w-auto flex">
-                    <img src={url + "/images/" + product.image} alt={product.name} className='rounded-xl bg-gray-10 object-cover' />
+                    <img src={product.image} alt={product.name} className='rounded-xl bg-gray-10 object-cover' />
                 </div>
             </div>
 

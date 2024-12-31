@@ -18,6 +18,9 @@ const List = () => {
     }
   };
 
+  console.log("zsd",list);
+  
+
   const removeProduct = async (productId) => {
     const response = await axios.post(`${url}/api/product/removeproduct`, {
       id: productId,
@@ -55,7 +58,7 @@ const List = () => {
                 {/* <td className="p-1">{index + 1}</td> */}
                 <td className="p-1">
                   <img
-                    src={`${url}/images/` + item.image}
+                    src={item.image}
                     alt="productImage"
                     height={38}
                     width={38}

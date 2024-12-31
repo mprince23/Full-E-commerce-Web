@@ -3,7 +3,7 @@ import { TbArrowRight } from 'react-icons/tb'
 
 const ProductHd = ({product}) => {
     return (
-        <div className='max-padd-container flex items-center flex-wrap gap-x-2 medium-16 py-4 capitalize bg-primary rounded-tl-xl rounded-tr-xl'>Home <TbArrowRight /> {product.name} </div>
+        <div className='max-padd-container flex items-center flex-wrap gap-x-2 medium-16 py-4 capitalize bg-primary rounded-tl-xl rounded-tr-xl'><a href='/' className='cursor-pointer'>Home</a> <TbArrowRight /> {product.name} </div>
     )
 }
 

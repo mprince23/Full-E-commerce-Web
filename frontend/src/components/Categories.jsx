@@ -22,7 +22,7 @@ const Categories = ({ category, setCategory }) => {
             <div className='p-8 rounded-2xl cursor-pointer bg-primary'>
               <img src={item.image} alt={item.name} height={155} width={155} className='object-cover h-32' />
             </div>
-            <h4 className={`mt-6 medium-18 ${category === item.name ? "border-b-4 border-secondary" : "border-b-4 border-white"}`}>{item.name}</h4>
+            <h4 className={`mt-6 medium-18 ${category === item.name ? "border-b-4 border-secondary capitalize" : "border-b-4 border-white capitalize"}`}>{item.name}</h4>
           </div>
         ))}
       </div>

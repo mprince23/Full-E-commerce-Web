@@ -36,7 +36,7 @@ const Cart = () => {
                   >
                     <td className="p-1">
                       <img
-                        src={url + "/images/" + product.image}
+                        src={product.image}
                         alt=""
                         height={43}
                         width={43}

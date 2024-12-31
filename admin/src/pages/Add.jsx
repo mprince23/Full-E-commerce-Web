@@ -12,7 +12,7 @@ const Add = () => {
     name: "",
     description: "",
     price: "",
-    category: "Men",
+    category: "electronics",
   });
 
   const handlerChange = (e) => {
@@ -45,7 +45,7 @@ const Add = () => {
         name: "",
         description: "",
         price: "",
-        category: "Men",
+        category: "electronics",
       });
       setImage(false);
       toast.success(response.data.message)

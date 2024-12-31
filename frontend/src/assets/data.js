@@ -75,15 +75,15 @@ export const categories = [
     image: women,
   },
   {
-    name: "Kids",
+    name: "kids",
     image: kids,
   },
   {
-    name: "Electronics",
+    name: "electronics",
     image: electronics,
   },
   {
-    name: "Cosmetics",
+    name: "cosmetics",
     image: cosmetics,
   },
 ];
